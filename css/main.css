@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: #2F3944;
+  font-family: 'Braah One', sans-serif;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background: #415767;
+  box-shadow: 1px 1px 15px #415767;
+  z-index: 1;
+  transition: top 0.3s;
+}
+label a{
+  line-height: 80px;
+  padding: 0 80px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
+  user-select: none;
+}
+nav ul{
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  line-height: 80px;
+  margin-right: 50px;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li.active a{
+  color: #0089f2;
+  box-shadow: inset 0 0 5px #0a87f5,
+              inset 0 0 10px #85c3fa,
+              inset 0 0 15px #b6dbfc;
+}
+nav ul li:hover a{
+  color: white;
+  box-shadow: inset 0 0 5px #2F3944,
+              inset 0 0 10px #2F3944,
+              inset 0 0 15px #2F3944;
+}
+nav ul li a{
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Braah One', sans-serif;
+  font-size: 20px;
+}
+nav ul li a.active2{
+  color: #0089f2;
+  box-shadow: inset 0 0 5px #0a87f5,
+              inset 0 0 10px #85c3fa,
+              inset 0 0 15px #b6dbfc;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: calc(100vh - 80px); /* Die Höhe des Viewports abzüglich der Höhe des Navigationsbereichs */
+}
+.typewriter {
+  font-size: 70px;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation:
+  typing 4s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+  /* Animation anhalten nach den ersten 14 Zeichen */
+  14ch {
+    width: 14ch;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+#rank{
+  font-size: 40px;
+}
+p{
+  font-size: 20px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px; /* adjust this value to control the distance between the main and the buttons */
+}
+#btn1{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Braah One', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+#btn2{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Braah One', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #2F3944;
+  border-radius: 5px;
+  border-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+#btn1:hover {
+  background-color: #2F3944;
+  cursor: pointer;
+  color: #007bff;
+}
+#btn2:hover {
+  background-color: #0062cc;
+  cursor: pointer;
+  color: white;
+}
